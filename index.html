@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Rafael Trevizoli | Banco de Dados - FATEC</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #24292e;
+      background: #ffffff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 1px solid #e1e4e8;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      border-bottom: 1px solid #e1e4e8;
+      padding-bottom: 8px;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .profile-photo {
+      display: block;
+      margin: 0 auto 32px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 35%;
+      border: 3px solid #e1e4e8;
+    }
+
+    .project-section {
+      border-left: 4px solid #0366d6;
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+
+    .project-section h2 {
+      border-bottom: none;
+      margin-top: 0;
+      color: #0366d6;
+    }
+
+    .project-section h3:first-child {
+      margin-top: 0;
+      color: #0366d6;
+    }
+
+    figure {
+      text-align: center;
+      margin: 24px 0;
+    }
+
+    /* Logos de parceiros: compactos, altura fixa */
+    img.img-logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 220px;
+      max-height: 80px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border: none;
+      border-radius: 0;
+    }
+
+    /* Screenshots de telas de sistema */
+    img.img-screenshot {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 7000px;
+      object-fit: contain;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+    }
+
+    /* Imagens de stack de tecnologias */
+    img.img-tech {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 680px;
+      max-height: 200px;
+      object-fit: contain;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+    }
+
+    /* Fallback para imgs sem classe específica */
+    figure img {
+      max-width: 100%;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 20mm 22mm;
+      }
+      body {
+        max-width: 100%;
+        padding: 0;
+        font-size: 11pt;
+        line-height: 1.6;
+        color: #000;
+      }
+      .project-section {
+        page-break-inside: avoid;
+      }
+      .skills-block {
+        page-break-inside: avoid;
+      }
+      figure {
+        page-break-inside: avoid;
+      }
+      img.img-logo {
+        max-width: 180px;
+        max-height: 65px;
+      }
+      img.img-screenshot {
+        width: 480px;
+        max-height: 300px;
+      }
+      img.img-tech {
+        width: 380px;
+        max-height: 160px;
+      }
+      .profile-photo {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.875rem;
+      color: #586069;
+      font-style: italic;
+    }
+
+    .skills-block {
+      background: #f6f8fa;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+
+    .skills-block h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #24292e;
+    }
+
+    .skills-block ul {
+      margin-bottom: 0;
+    }
+
+    .knowledge-section p {
+      background: #f6f8fa;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+
+    .contacts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contacts ul li {
+      margin-bottom: 8px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e1e4e8;
+      margin: 48px 0;
+    }
+
+    .project-nav {
+      text-align: center;
+      margin: 16px 0 32px;
+      font-size: 0.95rem;
+    }
+
+    .project-nav a {
+      margin: 0 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rafael Trevizoli</h1>
+
+  <p align="center">
+    <img src="./assets/rtrevizoli.png" alt="Rafael Trevizoli" class="profile-photo" />
+  </p>
+
+  <h2>Introdução</h2>
+
+  <p>Este portfólio reúne os projetos desenvolvidos ao longo da minha formação em Banco de Dados pela <a href="https://fatecsjc-prd.azurewebsites.net/">Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal</a>. Ingressei no curso no segundo semestre de 2022, trazendo uma trajetória prévia na área de desenvolvimento de software, com passagens por diferentes segmentos da indústria.</p>
+
+  <p>O curso de Banco de Dados ampliou minha visão técnica, especialmente nas áreas de modelagem de dados, arquitetura de sistemas e desenvolvimento orientado a dados. Ao longo dos semestres, trabalhei com equipes multidisciplinares em projetos reais, aplicando metodologias ágeis e tecnologias variadas para entregar soluções a parceiros acadêmicos.</p>
+
+  <p>Atuo principalmente no desenvolvimento backend, com experiência em Java, Python e ambientes containerizados. Tenho familiaridade com bancos de dados relacionais e não relacionais, desenvolvimento de APIs REST e integração de sistemas.</p>
+
+  <h2>Meus Principais Conhecimentos</h2>
+
+  <div class="knowledge-section">
+    <p>Java e Spring Boot, no desenvolvimento de APIs REST seguras e escaláveis; Python com Django, na construção de backends orientados a dados; Vue.js e TypeScript, no desenvolvimento de interfaces web modernas e componentizadas; PostgreSQL e MySQL, para modelagem relacional, otimização de consultas e controle de migrações; MongoDB, para armazenamento de dados não relacionais; Docker e Docker Compose, na construção de ambientes containerizados e reproduzíveis; Oracle Spatial e GeoTools, para processamento e armazenamento de dados geoespaciais; Swagger, na documentação de APIs REST; AWS e Azure, para hospedagem e deploy de aplicações em nuvem.</p>
+  </div>
+
+  <h2>Meus Projetos</h2>
+
+  <p class="project-nav">
+    <a href="#em-2022-1">Dynamics</a> •
+    <a href="#em-2024-2">GSW_API</a> •
+    <a href="#em-2025-1">GeoHood</a> •
+    <a href="#em-2025-2">Athos Insight</a> •
+    <a href="#em-2026-1">EnerSight</a>
+  </p>
+
+  <!-- =========================================================== -->
+  <div class="project-section" id="em-2022-1">
+    <h3>Em 2022-1</h3>
+
+    <p align="center">
+      <img src="assets/tudo-digital/logo-dynamics.png" alt="Logo Dynamics" class="img-logo" /><br>
+      <em>Figura 01 - Projeto Dynamics</em>
+    </p>
+
+    <p>O primeiro projeto integrador do curso de Banco de Dados propôs o desenvolvimento de uma solução de gerenciamento voltada ao controle de processos internos. O desafio envolvia a criação de um sistema capaz de cadastrar produtos, definir regras de promoções e vincular essas promoções aos produtos dentro da plataforma — uma demanda concreta de automação de processos comerciais.</p>
+
+    <p>O produto desenvolvido, o Dynamics, foi um sistema web com funcionalidades de cadastro de produtos, categorias e promoções, além do vínculo entre promoção e produto. A aplicação contou com diagramas de entidade e relacionamento, servidor de banco de dados online e wireframes que orientaram o desenvolvimento das telas.</p>
+
+    <p>Repo: <a href="https://github.com/TudoDigital/Dynamics">Projeto Dynamics</a></p>
+
+    <h3>Tecnologias utilizadas</h3>
+
+    <ul>
+      <li><strong>Java com Quarkus:</strong> Framework utilizado no desenvolvimento do backend, com foco em leveza e inicialização rápida.</li>
+      <li><strong>SQL Server:</strong> Banco de dados relacional escolhido para persistência dos dados de produtos, categorias e promoções.</li>
+      <li><strong>Vue.js:</strong> Biblioteca JavaScript utilizada no desenvolvimento da interface web da aplicação.</li>
+      <li><strong>Maven:</strong> Ferramenta de automação de build para gerenciamento de dependências do projeto.</li>
+    </ul>
+
+    <h3>Contribuições pessoais</h3>
+
+    <p>Atuei no desenvolvimento das APIs REST principais, incluindo os endpoints de cadastro de produtos, categorias e promoções. Um dos principais desafios foi implementar a lógica de negócio que vinculava promoções a produtos respeitando regras de vigência e compatibilidade — o que exigiu atenção ao modelo de dados e à validação das entradas. Também fui responsável pela implementação da autenticação e autorização, garantindo que diferentes perfis de acesso fossem tratados corretamente no backend.</p>
+
+    <div class="skills-block">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>Desenvolvimento de API com Java e Quarkus: Sei fazer com ajuda;</li>
+        <li>Modelagem relacional de banco de dados: Sei fazer com autonomia;</li>
+        <li>Desenvolvimento de frontend com Vue.js: Sei fazer com ajuda;</li>
+        <li>Metodologia Ágil SCRUM: Sei fazer com autonomia.</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><strong>Liderança técnica:</strong> coordenei decisões de arquitetura e orientei o time nas escolhas de implementação ao longo das sprints.</li>
+        <li><strong>Resolução de problemas:</strong> a tradução das regras de negócio do parceiro em fluxos implementáveis exigiu análise e adaptação constante, especialmente na lógica de vínculo entre promoções e produtos.</li>
+        <li><strong>Proatividade:</strong> como era o primeiro contato do time com o Quarkus, assumi a responsabilidade de estudar a documentação e propor a estrutura inicial do projeto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =========================================================== -->
+  <div class="project-section" id="em-2024-2">
+    <h2>Em 2024-2</h2>
+
+    <p align="center">
+      <img src="assets/coderhood/logo-gsw-api.png" alt="Logo GSW_API" class="img-logo" /><br>
+      <em>Figura 02 - Projeto GSW_API</em>
+    </p>
+
+    <p>O desafio proposto foi criar um mecanismo para mapeamento de portais de notícias estratégicas, com captura rotineira de dados para geração de histórico. A ideia era possibilitar, futuramente, a aplicação de análises baseadas em inteligência artificial para cruzamento de dados e identificação de ações estratégicas de negócio. Essa estrutura deveria ser aplicada também para APIs de fornecimento de dados estratégicos, como previsão do tempo.</p>
+
+    <p>A solução desenvolvida foi uma API com funcionalidades de cadastro de portais de notícias, cadastro de APIs externas, cadastro de tags, processo de web scraping para captura e armazenamento de dados, e telas de consulta com filtros. O sistema também oferecia indicação automática de tags relacionadas às notícias, facilitando a categorização e a análise posterior do conteúdo capturado.</p>
+
+    <p>Repo: <a href="https://github.com/FatecCoderHood/GSW_API">Projeto GSW_API</a></p>
+
+    <h3>Tecnologias utilizadas</h3>
+
+    <ul>
+      <li><strong>Java com Spring Boot:</strong> Backend estruturado com base consolidada para o desenvolvimento da API REST.</li>
+      <li><strong>JPA e Hibernate:</strong> Responsáveis pelo mapeamento objeto-relacional e pela comunicação com o banco de dados.</li>
+      <li><strong>MySQL:</strong> Banco de dados relacional escolhido para persistência de notícias, portais, jornalistas, tags e demais entidades.</li>
+      <li><strong>Vue.js:</strong> Utilizado no desenvolvimento do frontend minimalista da aplicação.</li>
+      <li><strong>Docker:</strong> Utilizado para containerização do ambiente de desenvolvimento.</li>
+      <li><strong>Figma:</strong> Ferramenta de design para prototipação das interfaces.</li>
+    </ul>
+
+    <h3>Contribuições pessoais</h3>
+
+    <p>Participei da definição da arquitetura da API e da implementação dos endpoints de cadastro e consulta. O principal desafio técnico foi modelar e implementar o relacionamento muitos-para-muitos entre notícias e tags de forma eficiente para consultas e capaz de suportar a indicação automática de categorias. Também trabalhei na camada de validação de dados, garantindo que as informações capturadas via scraping fossem armazenadas de forma consistente, mesmo diante de variações no formato dos conteúdos externos.</p>
+
+    <div class="skills-block">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>Desenvolvimento de API REST com Java e Spring Boot: Sei fazer com autonomia;</li>
+        <li>Modelagem de banco de dados relacional: Sei fazer com autonomia;</li>
+        <li>Web scraping e captura de dados: Sei fazer com ajuda;</li>
+        <li>Desenvolvimento de frontend com Vue.js: Sei fazer com ajuda;</li>
+        <li>Metodologia Ágil SCRUM: Sei fazer com autonomia.</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><strong>Trabalho em equipe:</strong> as decisões de arquitetura foram tomadas em conjunto, o que exigiu abertura para ouvir diferentes perspectivas e chegar a consensos técnicos sem travar o andamento das sprints.</li>
+        <li><strong>Comunicação:</strong> documentar os endpoints com clareza foi essencial para que o time de frontend conseguisse integrar sem retrabalho.</li>
+        <li><strong>Atenção a detalhes:</strong> dados coletados via scraping chegam em formatos variados; garantir consistência na camada de validação exigiu cuidado redobrado a cada fonte adicionada.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =========================================================== -->
+  <div class="project-section" id="em-2025-1">
+    <h2>Em 2025-1</h2>
+
+    <p align="center">
+      <img src="assets/coderhood/logo-geohood.png" alt="Logo GeoHood" class="img-logo" /><br>
+      <em>Figura 03 - Projeto GeoHood</em>
+    </p>
+
+    <p>O quarto semestre trouxe um desafio voltado ao processamento de dados geoespaciais aplicados à agricultura. O objetivo era criar um sistema para cadastro, análise e visualização de áreas agrícolas, com gestão eficiente por meio de dashboards interativos e mapas. O sistema deveria suportar diferentes perfis de usuário com permissões específicas e possibilitar o cadastro de geometrias via upload de arquivos .geojson.</p>
+
+    <p>O GeoHood foi desenvolvido como uma aplicação web que importa dados GeoJSON, processa as geometrias e as armazena em banco de dados Oracle Spatial. O sistema oferece consultas geográficas e visualização em mapas, dashboards interativos com filtros e controle de acesso por perfil de usuário — Administrador, Analista e Consultor —, cada um com responsabilidades distintas no ciclo de vida das áreas cadastradas.</p>
+
+    <p>Neste projeto, atuei como Product Owner, sendo responsável pela definição e priorização do backlog, levantamento de requisitos junto ao parceiro e acompanhamento da evolução das entregas ao longo das sprints.</p>
+
+    <p>Repo: <a href="https://github.com/FatecCoderHood/4_GeoHood">Projeto GeoHood</a></p>
+
+    <h3>Tecnologias utilizadas</h3>
+
+    <ul>
+      <li><strong>Java com Spring Boot:</strong> Backend robusto para as operações de importação, consulta e visualização dos dados geoespaciais.</li>
+      <li><strong>GeoTools e JTS:</strong> Bibliotecas Java utilizadas para processamento das geometrias e manipulação dos objetos geográficos.</li>
+      <li><strong>Oracle Spatial:</strong> Banco de dados com suporte nativo a dados geoespaciais, escolhido pela capacidade de armazenar e consultar geometrias.</li>
+      <li><strong>Vue 3 com TypeScript:</strong> Frontend moderno e modular para as interfaces de visualização e interação com o usuário.</li>
+      <li><strong>Figma:</strong> Ferramenta de design utilizada na prototipação das telas.</li>
+    </ul>
+
+    <h3>Contribuições pessoais</h3>
+
+    <p>Atuei em dupla função: como Product Owner, conduzi o levantamento de requisitos com o parceiro, organizei o backlog e priorizei as entregas por sprint. No desenvolvimento, o maior desafio foi implementar o parser de GeoJSON para converter as geometrias dos arquivos enviados em objetos compatíveis com o Oracle Spatial. Esse processo exigiu aprender sobre projeções geográficas, tipos de dados espaciais e a forma como o banco representava internamente essas estruturas — tudo isso em um domínio novo para toda a equipe.</p>
+
+    <div class="skills-block">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>Geoprocessamento com Java: Sei fazer com ajuda;</li>
+        <li>Integração com Oracle Spatial: Sei fazer com ajuda;</li>
+        <li>Desenvolvimento fullstack com Vue 3 e TypeScript: Sei fazer com ajuda;</li>
+        <li>Atuação como Product Owner: Sei fazer com autonomia;</li>
+        <li>Metodologia Ágil SCRUM: Sei fazer com autonomia.</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><strong>Adaptabilidade:</strong> o domínio de geoprocessamento era completamente novo para o time, o que exigiu estudo rápido e aplicação prática simultânea, sem o apoio de experiência prévia na área.</li>
+        <li><strong>Gestão de prioridades:</strong> equilibrar a atuação como PO — respondendo às demandas do parceiro — com a contribuição direta no desenvolvimento exigiu organização e senso claro de prioridade a cada sprint.</li>
+        <li><strong>Liderança:</strong> conduzir o backlog e garantir que os requisitos estivessem claros antes do início de cada sprint foi central para que o time desenvolvesse com foco e sem retrabalho.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =========================================================== -->
+  <div class="project-section" id="em-2025-2">
+    <h2>Em 2025-2</h2>
+
+    <p align="center">
+      <img src="assets/athos/logo-athos-insight.png" alt="Logo Athos Insight" class="img-logo" /><br>
+      <em>Figura 04 - Projeto Athos Insight</em>
+    </p>
+
+    <p>O Athos Insight é uma plataforma web que centraliza e organiza dados de projetos, transformando-os em informações estratégicas para a tomada de decisão. A aplicação permite monitorar produtividade e horas lançadas por desenvolvedor e projeto, acompanhar custos previstos em relação aos realizados, visualizar dashboards com indicadores financeiros e operacionais, controlar a evolução de tarefas, bugs e issues, e exportar relatórios em PDF. A solução foi hospedada em uma máquina virtual na Microsoft Azure, com capacidade para até 30 usuários simultâneos no ambiente educacional.</p>
+
+    <p>Repo: <a href="https://github.com/AthosFatecSjc/Athos_Insight">Projeto Athos Insight</a></p>
+
+    <h3>Tecnologias utilizadas</h3>
+
+    <ul>
+      <li><strong>Python com Django:</strong> Framework web utilizado no desenvolvimento do backend, escolhido pela robustez e maturidade do ecossistema Python.</li>
+      <li><strong>PostgreSQL:</strong> Banco de dados relacional utilizado para o Data Warehouse e persistência dos dados analíticos.</li>
+      <li><strong>HTMX:</strong> Biblioteca utilizada para interações assíncronas no frontend, sem a necessidade de um framework JavaScript pesado.</li>
+      <li><strong>Docker:</strong> Utilizado para orquestração do ambiente de desenvolvimento e produção.</li>
+      <li><strong>Git e GitHub:</strong> Controle de versão e colaboração entre os membros do time.</li>
+      <li><strong>Figma:</strong> Ferramenta de design para criação dos protótipos de interface.</li>
+      <li><strong>SonarQube:</strong> Utilizado para análise estática de código, garantindo qualidade e padronização ao longo do desenvolvimento.</li>
+    </ul>
+
+    <h3>Contribuições pessoais</h3>
+
+    <p>Trabalhei na arquitetura dos módulos centrais do backend, incluindo a estrutura de autenticação e a camada de serviços responsável pelo cálculo de métricas de produtividade e custos. Um dos desafios foi projetar o esquema de banco de dados de forma que as consultas analíticas — cruzando horas, tarefas e custos por desenvolvedor e projeto — fossem eficientes. Também contribuí na configuração do ambiente com Docker e participei ativamente das revisões de código orientadas pelos relatórios do SonarQube, que foram usados como critério de qualidade nas entregas.</p>
+
+    <div class="skills-block">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>Desenvolvimento de API com Python e Django: Sei fazer com autonomia;</li>
+        <li>Modelagem de Data Warehouse: Sei fazer com ajuda;</li>
+        <li>Desenvolvimento frontend com HTMX: Sei fazer com ajuda;</li>
+        <li>Uso de Docker para orquestração de ambiente: Sei fazer com autonomia;</li>
+        <li>Metodologia Ágil SCRUM: Sei fazer com autonomia.</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><strong>Visão sistêmica:</strong> projetar uma solução analítica onde backend, banco e frontend se comunicavam de forma integrada exigiu pensar além da própria tarefa e considerar o impacto de cada decisão no conjunto.</li>
+        <li><strong>Comprometimento com qualidade:</strong> adotar o SonarQube como critério de aceitação criou uma cultura de revisão contínua dentro do time, o que exigiu disciplina e abertura para refatorar código próprio.</li>
+        <li><strong>Comunicação:</strong> garantir alinhamento entre membros com diferentes níveis de experiência foi importante para que os módulos chegassem integrados e sem inconsistências a cada sprint.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =========================================================== -->
+  <div class="project-section" id="em-2026-1">
+    <h2>Em 2026-1</h2>
+
+    <p align="center">
+      <img src="assets/coderhood/logo-enersight.png" alt="Logo EnerSight" class="img-logo" /><br>
+      <em>Figura 05 - Projeto EnerSight</em>
+    </p>
+
+    <p>O EnerSight é uma plataforma web analítica desenvolvida para a TECSYS com o objetivo de centralizar, organizar e processar dados públicos da ANEEL. A plataforma automatiza a coleta de conjuntos de dados regulatórios, armazena-os em banco estruturado e permite a análise de indicadores de continuidade como DEC e FEC entre diferentes distribuidoras, regiões e agrupamentos elétricos. Entre as funcionalidades principais estão a coleta automatizada de dados, análise de indicadores, visualização comparativa, gerenciamento de usuários com controle de acesso e registro de logs para rastreabilidade das operações.</p>
+
+    <p>Repo: <a href="https://github.com/FatecCoderHood/EnerSight">Projeto EnerSight</a></p>
+
+    <h3>Tecnologias utilizadas</h3>
+
+    <ul>
+      <li><strong>Java 21 com Spring Boot 3:</strong> Backend moderno com as versões mais recentes do ecossistema Java, garantindo performance e suporte de longo prazo.</li>
+      <li><strong>Swagger:</strong> Documentação automática da API REST, facilitando o consumo dos endpoints por outras equipes.</li>
+      <li><strong>PostgreSQL:</strong> Banco de dados relacional para persistência estruturada dos indicadores regulatórios coletados.</li>
+      <li><strong>MongoDB:</strong> Banco de dados NoSQL utilizado para armazenamento de dados com estrutura variável.</li>
+      <li><strong>Docker:</strong> Containerização dos serviços do sistema para consistência entre ambientes de desenvolvimento e produção.</li>
+      <li><strong>Vue.js 3 com TypeScript:</strong> Frontend moderno com tipagem estática e componentização eficiente.</li>
+      <li><strong>Vuetify:</strong> Framework de componentes UI para Vue.js, utilizado na construção das interfaces visuais.</li>
+      <li><strong>Git e GitHub:</strong> Controle de versão e colaboração entre os membros do time.</li>
+    </ul>
+
+    <h3>Contribuições pessoais</h3>
+
+    <p>Desenvolvi os módulos de coleta automatizada dos datasets públicos da ANEEL, incluindo o processo de download, parse e armazenamento estruturado dos dados. O principal desafio foi lidar com a heterogeneidade dos arquivos disponibilizados — formatos e estruturas variavam entre os conjuntos de dados —, o que exigiu implementar rotinas de normalização antes de persistir as informações no banco. Também participei da implementação dos endpoints de análise que calculam e comparam os indicadores DEC e FEC entre distribuidoras, e colaborei no desenvolvimento dos componentes de dashboard no frontend.</p>
+
+    <div class="skills-block">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>Desenvolvimento de API com Java 21 e Spring Boot 3: Sei fazer com autonomia;</li>
+        <li>Integração com fontes de dados públicas: Sei fazer com autonomia;</li>
+        <li>Modelagem e consulta em PostgreSQL: Sei fazer com autonomia;</li>
+        <li>Desenvolvimento frontend com Vue.js 3 e TypeScript: Sei fazer com ajuda;</li>
+        <li>Uso de Docker para orquestração: Sei fazer com autonomia;</li>
+        <li>Documentação de API com Swagger: Sei fazer com autonomia;</li>
+        <li>Metodologia Ágil SCRUM: Sei fazer com autonomia.</li>
+      </ul>
+    </div>
+
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><strong>Protagonismo:</strong> assumi a responsabilidade pelos módulos de coleta sem supervisão direta, o que exigiu autonomia para tomar decisões técnicas e validar os resultados de forma independente.</li>
+        <li><strong>Atenção a detalhes:</strong> a variabilidade nos formatos dos dados públicos da ANEEL tornava a etapa de normalização crítica — um erro de parsing comprometia toda a análise subsequente.</li>
+        <li><strong>Organização:</strong> desenvolver coleta, processamento, API e frontend dentro dos prazos de cada sprint exigiu planejamento claro e capacidade de alternar entre frentes sem perder o fio condutor do projeto.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="contacts">Contatos</h2>
+
+  <div class="contacts">
+    <ul>
+      <li><a href="https://github.com/rtrevizoli">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/rafael-trevizoli/">LinkedIn</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
