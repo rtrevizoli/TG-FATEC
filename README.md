@@ -6,7 +6,7 @@
 
 ## Introdução
 
-Este portfólio reúne os projetos desenvolvidos ao longo da minha formação em Banco de Dados pela [Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/). Ingressei no curso no segundo semestre de 2022, trazendo uma trajetória prévia na área de desenvolvimento de software, com passagens por diferentes segmentos da indústria.
+Este portfólio reúne os projetos desenvolvidos ao longo da minha formação em Banco de Dados pela [Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/). Ingressei no curso em 2019, trazendo uma trajetória prévia na área de desenvolvimento de software, com passagens por diferentes segmentos da indústria.
 
 O curso de Banco de Dados ampliou minha visão técnica, especialmente nas áreas de modelagem de dados, arquitetura de sistemas e desenvolvimento orientado a dados. Ao longo dos semestres, trabalhei com equipes multidisciplinares em projetos reais, aplicando metodologias ágeis e tecnologias variadas para entregar soluções a parceiros acadêmicos.
 
@@ -53,9 +53,9 @@ Atuei no desenvolvimento das APIs REST principais, incluindo os endpoints de cad
 
 ### Hard Skills
 
-- Desenvolvimento de API com Java e Quarkus: Sei fazer com ajuda;
+- Desenvolvimento de API com Java e Quarkus: Sei fazer com autonomia;
 - Modelagem relacional de banco de dados: Sei fazer com autonomia;
-- Desenvolvimento de frontend com Vue.js: Sei fazer com ajuda;
+- Desenvolvimento de frontend com Vue.js: Sei fazer com autonomia;
 - Metodologia Ágil SCRUM: Sei fazer com autonomia.
 
 ### Soft Skills
@@ -95,8 +95,8 @@ Participei da definição da arquitetura da API e da implementação dos endpoin
 
 - Desenvolvimento de API REST com Java e Spring Boot: Sei fazer com autonomia;
 - Modelagem de banco de dados relacional: Sei fazer com autonomia;
-- Web scraping e captura de dados: Sei fazer com ajuda;
-- Desenvolvimento de frontend com Vue.js: Sei fazer com ajuda;
+- Web scraping e captura de dados: Sei fazer com autonomia;
+- Desenvolvimento de frontend com Vue.js: Sei fazer com autonomia;
 - Metodologia Ágil SCRUM: Sei fazer com autonomia.
 
 ### Soft Skills
@@ -114,7 +114,7 @@ Participei da definição da arquitetura da API e da implementação dos endpoin
 
 O quarto semestre trouxe um desafio voltado ao processamento de dados geoespaciais aplicados à agricultura. O objetivo era criar um sistema para cadastro, análise e visualização de áreas agrícolas, com gestão eficiente por meio de dashboards interativos e mapas. O sistema deveria suportar diferentes perfis de usuário com permissões específicas e possibilitar o cadastro de geometrias via upload de arquivos .geojson.
 
-O GeoHood foi desenvolvido como uma aplicação web que importa dados GeoJSON, processa as geometrias e as armazena em banco de dados Oracle Spatial. O sistema oferece consultas geográficas e visualização em mapas, dashboards interativos com filtros e controle de acesso por perfil de usuário, Administrador, Analista e Consultor,, cada um com responsabilidades distintas no ciclo de vida das áreas cadastradas.
+O GeoHood foi desenvolvido como uma aplicação web que importa dados GeoJSON, processa as geometrias e as armazena em banco de dados Oracle Spatial. O sistema oferece consultas geográficas e visualização em mapas, dashboards interativos com filtros e controle de acesso por perfil de usuário, Administrador, Analista e Consultor, cada um com responsabilidades distintas no ciclo de vida das áreas cadastradas.
 
 Neste projeto, atuei como Product Owner, sendo responsável pela definição e priorização do backlog, levantamento de requisitos junto ao parceiro e acompanhamento da evolução das entregas ao longo das sprints.
 
@@ -130,21 +130,29 @@ Repo: [Projeto GeoHood](https://github.com/FatecCoderHood/4_GeoHood)
 
 ### Contribuições pessoais
 
-Atuei em dupla função: como Product Owner, conduzi o levantamento de requisitos com o parceiro, organizei o backlog e priorizei as entregas por sprint. No desenvolvimento, o maior desafio foi implementar o parser de GeoJSON para converter as geometrias dos arquivos enviados em objetos compatíveis com o Oracle Spatial. Esse processo exigiu aprender sobre projeções geográficas, tipos de dados espaciais e a forma como o banco representava internamente essas estruturas, tudo isso em um domínio novo para toda a equipe.
+A equipe deste semestre se manteve unida a partir do projeto anterior, e a chegada de novos membros foi bem recebida pelo grupo. Esse histórico compartilhado acelerou o alinhamento inicial e trouxe confiança para enfrentar os desafios que viriam. Neste projeto atuei em dupla função: como Product Owner, conduzi o levantamento de requisitos com o parceiro, organizei o backlog e priorizei as entregas a cada sprint; e como desenvolvedor backend, assumi as responsabilidades técnicas mais complexas do ciclo.
+
+Um dos requisitos mais desafiadores foi a necessidade de utilizar o Oracle Database na Oracle Cloud para armazenar dados geoespaciais no formato GeoJSON como polígonos espaciais nativos. A tarefa foi iniciada por outro membro do backend, mas diante da complexidade técnica foi necessário redistribuir as responsabilidades. Um colega ficou responsável pela configuração da conexão com a Oracle Cloud e pela autenticação via wallet criptografada, enquanto assumi a frente de entender o padrão GeoJSON, implementar o sistema de importação e tratamento dos dados e integrar a biblioteca Oracle Spatial ao stack Java do backend.
+
+Durante o desenvolvimento, a licença estudantil expirou sem aviso e a instância do banco na nuvem foi encerrada automaticamente, apagando toda a infraestrutura configurada. Para resolver a situação, entrei em contato com o suporte internacional da Oracle durante a madrugada, identifiquei o ocorrido e reconstruí toda a estrutura em uma nova conta estudantil, incluindo a reconfiguração do banco para aceitar dados espaciais e a reintegração da biblioteca ao projeto Java, com a ingestão completa dos dados GeoJSON funcionando. Fomos o único grupo da turma a entregar esse requisito, e ainda auxiliamos outra equipe a configurar o mesmo ambiente com a respectiva wallet criptografada.
+
+Ao longo das sprints seguintes, enfrentamos um desequilíbrio de comprometimento dentro da equipe. Como resposta, reorganizamos as frentes de trabalho: assumi inteiramente o backend e o banco de dados, enquanto Juan ficou responsável pelo frontend e pela integração performática dos dados ao mapa interativo com Leaflet, um desafio técnico significativo por si só. Os demais membros concentraram suas contribuições em atividades administrativas, cadastrais e de design. A divisão foi desgastante, mas nos permitiu manter o ritmo e entregar um produto funcional dentro dos prazos.
 
 ### Hard Skills
 
-- Geoprocessamento com Java: Sei fazer com ajuda;
-- Integração com Oracle Spatial: Sei fazer com ajuda;
-- Desenvolvimento fullstack com Vue 3 e TypeScript: Sei fazer com ajuda;
+- Geoprocessamento com Java: Sei fazer com autonomia;
+- Integração com Oracle Spatial: Sei fazer com autonomia;
+- Desenvolvimento fullstack com Vue 3 e TypeScript: Sei fazer com autonomia;
 - Atuação como Product Owner: Sei fazer com autonomia;
 - Metodologia Ágil SCRUM: Sei fazer com autonomia.
 
 ### Soft Skills
 
-- Adaptabilidade: o domínio de geoprocessamento era completamente novo para o time, o que exigiu estudo rápido e aplicação prática simultânea, sem o apoio de experiência prévia na área.
-- Gestão de prioridades: equilibrar a atuação como PO, respondendo às demandas do parceiro, com a contribuição direta no desenvolvimento exigiu organização e senso claro de prioridade a cada sprint.
-- Liderança: conduzir o backlog e garantir que os requisitos estivessem claros antes do início de cada sprint foi central para que o time desenvolvesse com foco e sem retrabalho.
+- Resiliência: quando a instância do banco foi encerrada no meio do desenvolvimento, a resposta foi acionar o suporte internacional durante a madrugada e reconstruir toda a infraestrutura do zero, sem perder a sprint.
+- Protagonismo: assumi a feature tecnicamente mais complexa do projeto após a redistribuição de tarefas e conduzi a implementação até a entrega final, sem referências anteriores dentro da equipe.
+- Colaboração: após resolver o desafio no próprio projeto, compartilhei o conhecimento com outra equipe da turma, auxiliando-a a configurar o mesmo ambiente Oracle Cloud.
+- Adaptabilidade: reagir à perda da infraestrutura e à redistribuição de responsabilidades ao longo das sprints exigiu flexibilidade e capacidade de replanejamento sob pressão.
+- Liderança: manter o time com entregas consistentes em um contexto de desequilíbrio interno exigiu firmeza na reorganização das frentes e senso claro de prioridade.
 
 
 ## Em 2025-2
@@ -170,21 +178,28 @@ Repo: [Projeto Athos Insight](https://github.com/AthosFatecSjc/Athos_Insight)
 
 ### Contribuições pessoais
 
-Trabalhei na arquitetura dos módulos centrais do backend, incluindo a estrutura de autenticação e a camada de serviços responsável pelo cálculo de métricas de produtividade e custos. Um dos desafios foi projetar o esquema de banco de dados de forma que as consultas analíticas, cruzando horas, tarefas e custos por desenvolvedor e projeto, fossem eficientes. Também contribuí na configuração do ambiente com Docker e participei ativamente das revisões de código orientadas pelos relatórios do SonarQube, que foram usados como critério de qualidade nas entregas.
+Após o projeto anterior, eu e Juan chegamos ao Athos Insight com maturidade técnica e confiança construídas ao longo de um semestre muito exigente. De forma inesperada, recebemos um convite para integrar um novo grupo que estava se formando na turma. Aceitamos, motivados pela perspectiva de uma distribuição de tarefas mais equilibrada e por acreditar no potencial da equipe. As decisões técnicas e estruturais foram tomadas de forma democrática, o que tornou o processo colaborativo, mesmo quando as escolhas majoritárias foram em direção diferente da que eu defendia. Faz parte do trabalho em grupo.
+
+A situação ficou mais difícil quando membros que participaram de forma decisiva nas votações de stack e arquitetura trancaram o semestre logo no início, deixando o projeto com uma equipe reduzida. O backend e o frontend foram desenvolvidos em Python, uma stack nova para o grupo, o que significou aprender o framework enquanto o produto era construído, como trocar o pneu com o carro em movimento. Ruth, Caique, Juan e eu assumimos a responsabilidade de sustentar o projeto e manter o ritmo das entregas.
+
+Ao longo das sprints, conflitos de código e integrações mal testadas se tornaram parte da rotina. Funcionalidades que funcionavam voltavam quebradas após novos merges, o que gerava ciclos de correção intensos próximos às entregas. Os finais de sprint concentravam uma carga significativa de resolução de problemas: era recorrente que Ruth, Juan e eu ficássemos até tarde corrigindo código, alinhando lógica de negócio e garantindo que as funcionalidades chegassem estáveis na entrega. Esse nível de comprometimento foi necessário para manter a qualidade do produto mesmo diante de um ambiente de desenvolvimento bastante desgastante.
+
+Entregamos o produto. Ao final do semestre, parte do time optou por seguir em outra direção, uma decisão que foi difícil de absorver considerando o esforço coletivo investido por quem permaneceu. A experiência, por mais exigente que tenha sido, reforçou o valor do comprometimento real e da capacidade de manter a qualidade técnica mesmo quando as circunstâncias externas ao código se tornam adversas.
 
 ### Hard Skills
 
 - Desenvolvimento de API com Python e Django: Sei fazer com autonomia;
-- Modelagem de Data Warehouse: Sei fazer com ajuda;
-- Desenvolvimento frontend com HTMX: Sei fazer com ajuda;
+- Modelagem de Data Warehouse: Sei fazer com autonomia;
+- Desenvolvimento frontend com HTMX: Sei fazer com autonomia;
 - Uso de Docker para orquestração de ambiente: Sei fazer com autonomia;
 - Metodologia Ágil SCRUM: Sei fazer com autonomia.
 
 ### Soft Skills
 
-- Visão sistêmica: projetar uma solução analítica onde backend, banco e frontend se comunicavam de forma integrada exigiu pensar além da própria tarefa e considerar o impacto de cada decisão no conjunto.
-- Comprometimento com qualidade: adotar o SonarQube como critério de aceitação criou uma cultura de revisão contínua dentro do time, o que exigiu disciplina e abertura para refatorar código próprio.
-- Comunicação: garantir alinhamento entre membros com diferentes níveis de experiência foi importante para que os módulos chegassem integrados e sem inconsistências a cada sprint.
+- Adaptabilidade: aprender e aplicar Python com Django enquanto o produto estava sendo construído exigiu flexibilidade e ritmo de absorção acelerado, sem espaço para uma curva de aprendizado convencional.
+- Resiliência: manter o nível de entrega com equipe reduzida, gerenciando conflitos de código recorrentes e sessões longas de correção ao final de cada sprint, foi uma escolha deliberada de não largar o projeto.
+- Trabalho em equipe: a entrega final foi sustentada pela parceria entre Ruth, Caique, Juan e eu, um núcleo que se manteve coeso e se apoiou mutuamente ao longo de um semestre muito exigente.
+- Resolução de conflitos técnicos: identificar, depurar e corrigir integrações problemáticas antes de cada entrega tornou-se uma responsabilidade recorrente, desenvolvendo agilidade de diagnóstico e comunicação direta sob pressão.
 
 
 ## Em 2026-1
@@ -211,23 +226,30 @@ Repo: [Projeto EnerSight](https://github.com/FatecCoderHood/EnerSight)
 
 ### Contribuições pessoais
 
-Desenvolvi os módulos de coleta automatizada dos datasets públicos da ANEEL, incluindo o processo de download, parse e armazenamento estruturado dos dados. O principal desafio foi lidar com a heterogeneidade dos arquivos disponibilizados, formatos e estruturas variavam entre os conjuntos de dados,, o que exigiu implementar rotinas de normalização antes de persistir as informações no banco. Também participei da implementação dos endpoints de análise que calculam e comparam os indicadores DEC e FEC entre distribuidoras, e colaborei no desenvolvimento dos componentes de dashboard no frontend.
+O semestre começou com energias renovadas e um novo integrante no grupo. Ruth assumiu o papel de Product Owner e fez um trabalho muito cuidadoso: chegou à reunião de planejamento com um plano estruturado, pensado para facilitar a organização de todos. Em um momento de ceticismo, fiz questionamentos excessivos ao plano sem considerar o quanto ela havia se dedicado. Dias depois, em conversa com outros membros, percebi o erro, procurei ela pessoalmente, me desculpei e agradeci o esforço. Foi um momento importante de autoconhecimento e respeito.
+
+A sprint 1 trouxe problemas estruturais desde cedo: uma tarefa de base do backend que deveria estar pronta antes do início oficial só foi mergeada sete dias após o começo da sprint. Com isso, outros membros que avançaram com suas implementações sem a fundação pronta acumularam PRs com conflitos que se tornaram cada vez mais difíceis de resolver. O processo de revisão ficou excessivamente rígido logo de início, muitas críticas e exigências de alteração na primeira PR, gerando atrasos que se propagaram por todas as entregas posteriores. Neste período, atravessei um momento pessoal muito difícil: a hospitalização e o falecimento da minha avó exigiram viagens frequentes e me afastaram do projeto em um momento crítico para o grupo.
+
+Ao retomar, identifiquei um problema recorrente no backlog: tarefas criadas sem avaliação crítica descreviam a mesma implementação de formas diferentes, distribuídas entre membros distintos. Passei uma madrugada implementando todos os pontos de uma tarefa para descobrir, no dia seguinte ao registrar a entrega no Jira, que outro membro tinha uma tarefa diferente com a mesma demanda. Comuniquei diretamente o colega sobre o problema. Nesse contexto, o PO pediu saída e outros membros decidiram formar um grupo próprio.
+
+A decisão foi encarada como uma oportunidade. Convenci Juan e Renato a abandonarmos o código anterior e começarmos do zero: novo grupo, nova empresa, novo produto. Assumi o backend integralmente, Juan ficou com o frontend e a função de PO, e Renato com as documentações e o cargo de SM. Com apenas duas sprints restantes, definimos um plano objetivo, primeira sprint para construir o produto, segunda para validar as matérias, e trabalhamos no ritmo e no clima de uma startup. Entregamos o EnerSight com qualidade que, na minha avaliação, representou o melhor produto técnico da turma. Na sprint final, recebemos Lucas e Vinícius, que desenvolveram a frente de séries temporais e previsibilidade com alto nível de dedicação e entrega.
 
 ### Hard Skills
 
 - Desenvolvimento de API com Java 21 e Spring Boot 3: Sei fazer com autonomia;
 - Integração com fontes de dados públicas: Sei fazer com autonomia;
 - Modelagem e consulta em PostgreSQL: Sei fazer com autonomia;
-- Desenvolvimento frontend com Vue.js 3 e TypeScript: Sei fazer com ajuda;
+- Desenvolvimento frontend com Vue.js 3 e TypeScript: Sei fazer com autonomia;
 - Uso de Docker para orquestração: Sei fazer com autonomia;
 - Documentação de API com Swagger: Sei fazer com autonomia;
 - Metodologia Ágil SCRUM: Sei fazer com autonomia.
 
 ### Soft Skills
 
-- Protagonismo: assumi a responsabilidade pelos módulos de coleta sem supervisão direta, o que exigiu autonomia para tomar decisões técnicas e validar os resultados de forma independente.
-- Atenção a detalhes: a variabilidade nos formatos dos dados públicos da ANEEL tornava a etapa de normalização crítica, um erro de parsing comprometia toda a análise subsequente.
-- Organização: desenvolver coleta, processamento, API e frontend dentro dos prazos de cada sprint exigiu planejamento claro e capacidade de alternar entre frentes sem perder o fio condutor do projeto.
+- Autoconhecimento: reconhecer que minha postura inicial no planejamento foi inadequada para o momento e corrigi-la diretamente com a colega foi um exercício de maturidade e autocrítica que impactou positivamente a dinâmica do grupo.
+- Resiliência pessoal: manter o comprometimento profissional durante um período de perda pessoal significativa foi o desafio mais humano do semestre.
+- Tomada de decisão: propor o recomeço do zero, descartando o trabalho acumulado em favor de uma equipe alinhada e de um produto viável, foi uma escolha difícil e que se mostrou acertada.
+- Protagonismo: assumir a liderança técnica do backend no novo grupo e entregar dentro dos prazos reduzidos exigiu autonomia total e foco nas prioridades certas.
 
 ## Contatos
 
